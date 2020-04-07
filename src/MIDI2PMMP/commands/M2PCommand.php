@@ -27,13 +27,13 @@ class M2PCommand extends Command {
 			}
 		}else if($args[0] === 'play' && isset($args[1])){
 			if($this->_this->startSoundNumber($sender->getPlayer(), intval($args[1]))){
-				$sender->sendMessage('[M2P] 再生を開始します。');
+				$sender->sendMessage('');
 				return true;
 			}
 			return false;
 		}else if($args[0] === 'reload'){
 			$list = $this->_this->reloadSoundList();
-			$sender->sendMessage('[M2P] Reload');
+			$sender->sendMessage('');
 			return true;
 		}else if($args[0] === 'stop'){
 			$list = $this->_this->stopSound($sender->getPlayer());
