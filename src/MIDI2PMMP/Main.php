@@ -103,15 +103,5 @@ class Main extends PluginBase implements Listener{
 						$pk->x = $this->player->x;
 						$pk->y = $this->player->y;
 						$pk->z = $this->player->z;
-						$this->player->dataPacket($pk);
-					}
-					$this->player->sendTip("[M2P] Playing...  ".self::SecToMinSec($this->_tick/20).'/'.$this->endTime." notes:".count($this->sound[$this->_tick]));
-				}else{
-					$this->player->sendTip("[M2P] Playing...  ".self::SecToMinSec($this->_tick/20).'/'.$this->endTime." notes:0");
-				}
-				$this->_tick++;
-			}
-		}, $delay, 1);
-	}
-
+						$this->player->dataPacket($pk)
 }
